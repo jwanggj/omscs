@@ -1,4 +1,8 @@
 """
+Dynamic Porgramming Intro
+"""
+
+"""
 Method 1:Recursive Algorithm
 Fib1(n):
     F[0] = 0  # O(1)
@@ -10,6 +14,8 @@ Let T(n)=# steps for Fib1(n)
 T(n) <= O(1) + T(n-1) + T(n-2)
 T(n) >= Fn = phi ^ n /sqrt(5)
 where phi = (1+sqrt(5)) / 2
+
+INEFFICIENT!!!
 
 Method 2: Dynamic Programming
 Fib2(n):
@@ -25,6 +31,12 @@ Dynamic Programming
 - Memoization
 
 """
+
+"""
+Dynamic Porgmming
+- No recursion in algorithm
+"""
+
 
 def fibonacci_num(n):
     if n == 0:

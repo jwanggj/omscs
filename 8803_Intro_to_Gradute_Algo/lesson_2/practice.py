@@ -1,4 +1,6 @@
 """
+Practice Problems: 6.1, 6.2, 6.3, 6.4, 6.11
+
 Approach
 1. Define subproblem
     a. prefix
@@ -15,16 +17,11 @@ Goal Substring with max sum
 
 subproblem for 0<=i<=n
 
-    let S(i) = max sum from substring of a1, ..., an
+    let S(i) = max sum from substring of a1, ..., ai, which include ai
 
-    S(i) in terms of S(1),...S(i-1)
+    S(i) = ai + max{0, S(i-1)}
 
-
-"""
-
-"""
-Solution 6.1
-
+Output: max(S(i))
 
 
 """

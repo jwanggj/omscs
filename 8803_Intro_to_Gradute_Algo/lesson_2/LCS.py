@@ -13,7 +13,7 @@ Step 1: Desgin subproblem in words
     Let L(i)=length of LCS in X1...Xi, Y1...Yi
 
 Step 2: Define recurrence
-
+    Can't reach a solution!
 
 
 """

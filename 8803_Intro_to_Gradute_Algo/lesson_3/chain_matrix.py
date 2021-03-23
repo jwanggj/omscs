@@ -22,7 +22,7 @@ Cost for matrix Multiply
 Take W of size a*b & Y of size b*c
 Z = W * Y is of size a * c
 
-abc multiplications
+abc multiplications(dominant factor)
 ac(b-1) additions
 
 cost abc

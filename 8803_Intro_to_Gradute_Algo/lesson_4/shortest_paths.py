@@ -40,3 +40,43 @@ check if D(n,z) < D(n-1,z)
     for some z (E) V
     
 """
+
+"""
+All-pairs shortest path
+
+Bellman-ford idea: conditon on #of edges
+New idea: let V= {1,2,3,...,n}
+            condition on intermediate vertices
+                        => use prefix of V
+
+For 0<=i<=n & 1<=s,t<=n
+    let D(i,s,t)=length of shortest path s~t
+                    using a subset of {1,...,i}
+                    as intermediate vertices
+
+Base case: D(0,s,t) = 
+    if st (E) E: w(s,t)
+    else: inf
+
+Fpr i >= : look at shortest path p s~t using {1,...,i}
+    if i (not E) P: D(i,s,t)=D(i-1,s,t)
+    if i (E) P: D(i,s,t)=D(i-1,s,i)+D(i-1,i,t)
+
+    D(i,s,t)=min{D(i-1,s,t), D(i-1,s,i)+D(i-1,i,t)}
+
+Floyd-warshall(G,w):
+    For S=1->n:
+        For t=1->n:
+            if st (E) E then D(0,s,t)=w(s,t)
+                        else D(0,s,t)=inf
+    For i=1->n:
+        For s=1->n:
+            For t=1->n:
+                D(i,s,t)=min{D(i-1,s,t), D(i-1,s,i)+D(i-1,i,t)}
+    return (D(n,.,.))
+
+assume NO negative weight cycles
+
+HW problem:
+[DPV] 4.21
+"""
